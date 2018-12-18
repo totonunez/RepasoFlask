@@ -68,8 +68,8 @@ sql ="""
 CREATE TABLE CHOQUES
             (ID_EVENTO int PRIMARY KEY,
             ano varchar(5),
-            mes varchar(3),
-            dia varchar(3),
+            mes varchar(5),
+            dia varchar(5),
             hora varchar(10),
             ciudad varchar(60),
             calle varchar(60),
