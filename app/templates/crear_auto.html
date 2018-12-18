@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+  {% block content %}
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Ingreso de Auto</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Porfavor ingrese todos los datos solicitados 
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <form role="form"  action="/CREAR_AUTO" method="post" enctype="application/x-www-form-urlencoded" >
+                                            <div class="form-group">
+                                                <label>Patente</label>
+                                                <input class="form-control" name="PATENTE">
+                                                <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Rut dueno vehiculo </label>
+                                                    <input class="form-control" name="RUT">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Largo</label>
+                                                    <input class="form-control" name="LARGO">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Ancho</label>
+                                                    <input class="form-control" name="ANCHO">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Alto</label>
+                                                    <input class="form-control" name="ALTO">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Peso Neto</label>
+                                                    <input class="form-control" name="PESO_NETO">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Tipo Combustible</label>
+                                                    <input class="form-control" name="TIPO_COMBUSTIBLE">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Tipo de Auto</label>
+                                                    <input class="form-control" name="TIPO_AUTO">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Numero maximo de pasajeros</label>
+                                                    <input class="form-control" name="MAXIMO_PASAJERO">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Numero de aro de vehiculo</label>
+                                                    <input class="form-control" name="NUM_ARO">
+                                                    <p class="help-block"></p>
+                                            </div>
+                                          
+                                            <button type="submit" class="btn btn-default">Enviar Solicitud</button>
+                                            <button type="reset" class="btn btn-default">Eliminar Valores</button>
+                                        </form>
+                                    </div>
+                                    <!-- /.col-lg-6 (nested) -->
+                                 
+                                    <!-- /.col-lg-6 (nested) -->
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /#page-wrapper -->
+
+                {% endblock %}   

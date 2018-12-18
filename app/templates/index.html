@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+  {% block content %}
+  <div id="page-wrapper">  
+    <div class="container">
+
+      <div class="row">
+
+
+          <!-- Blog Entries Column -->
+          <div class="col-md-8">
+
+
+            <h1 class="page-header">
+              
+               NewralCar 
+                <small>Proyecto Base de Datos </small>
+            </h1>
+            <!-- First Blog Post -->
+
+            <div class="w3-row-padding w3-margin-bottom">
+
+              <div class="w3-quarter">
+              <a href="/CREAR_AUTO">
+                  <div class="w3-container w3-red w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-car w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                      <h3>
+                        {{cantidad_auto[0][0]}}
+                      </h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Ingresar Auto</h4>
+                  </div>
+                </a>
+              </div>
+
+              <div class="w3-quarter">
+                <a href="\CREAR_CLIENTE">
+                  <div class="w3-container w3-blue w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                      <h3>
+                        {{cantidad_clientes[0][0]}}
+                      </h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Ingresar Usuario</h4>
+                  </div>
+                </a>
+              </div>
+              
+              
+              <div class="w3-quarter">
+                <a href="/REVISAR_MEDICIONES">
+                  <div class="w3-container w3-teal w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                      </div>
+                    <div class="w3-clear"></div>
+                    <h4>Desplegar Datos de Sensores </h4>
+                  </div>
+                </a>
+              </div>
+
+              <div class="w3-quarter">
+                <a href="/REVISAR_GPS">
+                  <div class="w3-container w3-orange w3-text-white w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-building w3-xxxlarge"></i></div>
+                      <div class="w3-right">
+                      </div>
+                    <div class="w3-clear"></div>
+                    <h4>Desplegar GPS</h4>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+            <hr>
+            <div class="w3-container">
+              <h5>Datos del choque que tuvo la mayor cantidad de vehiculos afectados</h5>
+              <ul class="w3-ul w3-card-4 w3-white">
+                <li class="w3-padding-16">
+                  Calle <span class="w3-xlarge">{{granchoque[0][0]}}</span><br>
+                </li>
+                <li class="w3-padding-16">
+                 Numeracion <span class="w3-xlarge">{{granchoque[0][1]}}</span><br>
+                </li>
+                <li class="w3-padding-16">
+                  Fecha <span class="w3-xlarge">{{granchoque[0][2]}}</span><br>
+                </li>
+                <li class="w3-padding-16">
+                  Hora <span class="w3-xlarge">{{granchoque[0][3]}}</span><br>
+                </li>
+                
+              </ul>
+            </div>
+            <hr>
+
+              
+
+        </div>
+          <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+
+
+         <!-- Side Widget Well -->
+              <div class="well">
+                  <h4>Colaboradores </h4>
+                  <p>Diego Lagos</p>
+                  <p>Alonso Gajardo</p>
+                  <p>Cristóbal Núñez </p>
+              </div>
+
+              <!-- Blog Categories Well -->
+              <div class="well">
+                  <h4>Proyecto al servicio de la detección de accidentes y el perfecto funcionamiento del transito</h4>
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <ul class="list-unstyled">
+
+                              {% for categoria in categorias %}
+                              <li><a href="/categoria/{{categoria[0]}}">{{categoria[1]}}</a>
+                              </li>
+                              {% endfor %}
+                          </ul>
+                      </div>
+                    
+                      <!-- /.col-lg-6 -->
+                  </div>
+                  <!-- /.row -->
+              </div>
+
+            
+
+          </div>
+
+      </div>
+      <!-- /.row -->
+
+      <hr>
+      <div class="w3-container w3-dark-grey w3-padding-32">
+          <div class="w3-row">
+            <div class="w3-container w3-third">
+              <h5 class="w3-bottombar w3-border-green">Localizacion</h5>
+              <p>Español</p>
+              <p>Chile</p>
+              <p>Santiago</p>
+            </div>
+            <div class="w3-container w3-third">
+              <h5 class="w3-bottombar w3-border-red">Sistema</h5>
+              <p>Buscador</p>
+              <p>Linux - Dungeon Company </p>
+              <p>Más</p>
+            </div>
+            <div class="w3-container w3-third">
+              <h5 class="w3-bottombar w3-border-orange">Correos</h5>
+              <p><a href="mailto:cristobal.nunez@mail.udp.cl">cristobal.nunez@mail.udp.cl</a></p>
+              <p><a href="mailto:alonso.gajardo@mail.udp.cl">alonso.gajardo@mail.udp.cl</a></p>
+              <p><a href="mailto:diego.lagos@mail.udp.cl">diego.lagos@mail.udp.cl</a></p>
+            </div>
+          </div>
+        </div>
+
+      <!-- Footer -->
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Copyright &copy; </p>
+              </div>
+              <!-- /.col-lg-12 -->
+          </div>
+          <!-- /.row -->
+      </footer>
+
+  </div>
+</div>
+  {% endblock %}

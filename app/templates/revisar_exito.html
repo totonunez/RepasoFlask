@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">DESPLIEGE DATA DE  {{TYPE_SENSOR}}</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>GRAFICA DE ULTIMO DIA</p>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <script>
+                            window.onload = function () {
+                            var chart = new CanvasJS.Chart("chartContainer", {
+	                        animationEnabled: true,
+	                        theme: "dark2",
+	                        title:{
+		                    text: ""
+	                        },  
+	                        axisY:{
+		                    includeZero: false
+				    },
+	                        data: [{        
+		                        type:  "spline",  
+					lineColor:"red",
+		                        dataPoints: {{data}}
+	                               }]
+                            });
+                            chart.render();
+                                }
+                        </script>
+                        <div id="chartContainer" style="height: 500px; width: 200%;"></div>
+                        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                            <br>
+                            <form action="/REVISAR">
+                              <input type="submit" value="VOLVER">
+                            </form>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                     
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+{% endblock %}
