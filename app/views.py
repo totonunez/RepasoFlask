@@ -38,13 +38,12 @@ def index():
 		cur.execute(sql)
 		granchoque = cur.fetchall()
 		conn.commit()
+		return render_template("index.html",cantidad_auto1=cantidad_auto,cantidad_clientes1 = cantidad_clientes,granchoque1=granchoque)
 	except:
 		pass
-	
 
-	
+	return render_template("index.html")	
 
-	return render_template("index.html",cantidad_auto1=cantidad_auto,cantidad_clientes1 = cantidad_clientes,granchoque1=granchoque)
 
 
 @app.route('/ELIMINAR',methods=['GET', 'POST'])
