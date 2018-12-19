@@ -9,7 +9,8 @@ cur = conn.cursor()
 @app.route('/')
 @app.route('/index')
 def index():
-	
+	global cantidad_auto1,cantidad_clientes1,granchoque1
+
 	try:
 		sql ="""
 		select count(*) from autos;
@@ -43,7 +44,7 @@ def index():
 
 	
 
-	return render_template("index.html",cantidad_auto=cantidad_auto,cantidad_clientes = cantidad_clientes,granchoque=granchoque)
+	return render_template("index.html",cantidad_auto1=cantidad_auto,cantidad_clientes1 = cantidad_clientes,granchoque1=granchoque)
 
 
 @app.route('/ELIMINAR',methods=['GET', 'POST'])
