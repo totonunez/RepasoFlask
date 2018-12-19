@@ -9,6 +9,7 @@ cur = conn.cursor()
 @app.route('/')
 @app.route('/index')
 def index():
+	
 	try:
 		sql ="""
 		select count(*) from autos;
@@ -36,7 +37,7 @@ def index():
 		cur.execute(sql)
 		granchoque = cur.fetchall()
 		conn.commit()
-	except expression as identifier:
+	except:
 		pass
 	
 
