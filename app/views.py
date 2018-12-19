@@ -34,8 +34,8 @@ def index():
 										from involucrados group by id_evento) as jj) and choques.id_evento = kk.id_evento;"""
 
 		print sql
-		granchoque = cur.fetchall()
 		cur.execute(sql)
+		granchoque = cur.fetchall()
 		conn.commit()
 	except:
 		pass
